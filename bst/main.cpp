@@ -11,8 +11,12 @@ int main() {
   t.insert (4);
   t.insert (7);
   t.insert (13);
-  auto n = t.find (6);
-  t.erase(n);
+  auto n = t.find (14);
+  auto p = n->parent;
+  std::cout << t;
+  t.erase (n);
+  std::cout << t;
+  t.erase (p);
   std::cout << t;
 
   return 0;
